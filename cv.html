@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiktoria Szwarc</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9239a5b34f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div id="navbar">
+      <a href="#About_me">About me</a>
+      <a href="#Education">Education</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Contact">Contact</a>
+    </div>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    </script>
+
+    <div id="main">
+      <section id="start">
+        <article>
+          <img id="profile" src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/318018684_665860638342478_3198410328012690796_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=2YoeY1Up2nAAX9dfmBI&_nc_ht=scontent-waw1-1.xx&oh=03_AdRLswwCpbeuq5eW32KH_ZxDS13jbjzBnWmKT63-dMuyMw&oe=63B308D5">
+          <h1>Wiktoria Szwarc</h1>
+          <h2>Curriculum Vitae</h2>
+        </article>
+      </section>
+
+      <section id="About_me">
+        <h1 id="about_header">About me</h1>
+          <div>
+            <p>I'm a final-year student at the University of Gdansk. I am a linguist with a passion for natural language processing.
+              I am particularly interested in analysing media discourse. In my BA thesis I analysed the misrepresentation of ethnic minorities in the British media.
+              Currently my research is focused on sentiment analysis of news article headlines and the effect sentiment has on their popularity. </p>
+          </div>
+      </section>
+
+      <section id="Education">
+        <h1 id="education_header">Education</h1>
+        <div class="tab">
+          <button class="tablinks" onclick="openEdu(event, 'BA')">BA</button>
+          <button class="tablinks" onclick="openEdu(event, 'MA')">MA</button>
+        </div>
+        
+       
+        <div id="BA" class="tabcontent">
+          <h3>Bachelor of Arts</h3>
+          <p>English Philology</p>
+          <p>English Language Teaching</p>
+          <p>University of Gdansk</p>
+          <p>2018-2021</p>
+        </div>
+        
+        <div id="MA" class="tabcontent">
+          <h3>Master of Arts</h3>
+          <p>English Philology</p>
+          <p>Natural Language Processing</p>
+          <p>University of Gdansk</p>
+          <p>2021-ongoing</p>
+        </div>
+ 
+        <script>
+          function openEdu(evt, EduName) {
+  
+          var i, tabcontent, tablinks;
+
+  
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+
+  
+          document.getElementById(EduName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+      </section>
+      
+      <section id="Skills">
+        <h1 id="skills_header">Skills</h1>
+        <button class="accordion">Languages</button>
+          <div class="panel">
+            <ul>
+              <li>English C2</li>
+              <li>German B2</li>
+            </ul>
+          </div>
+
+          <button class="accordion">IT</button>
+          <div class="panel">
+            <ul>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>LaTeX</li>
+              <li>Markdown</li>
+              <li>JupyterNotebook</li>
+              <li>Linux</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+
+          <button class="accordion">Other</button>
+          <div class="panel">
+            <ul>
+              <li>Working in a team</li>
+              <li>Self-organization</li>
+              <li>Time management</li>
+              <li>Quick learning</li>
+            </ul>
+          </div>
+
+         <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+  
+              this.classList.toggle("active");
+
+             
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+         </script> 
+      </section>
+      <section id="Contact">
+        <div>
+          <h1 id="contact_header">Contact me</h1>
+          <a href="https://github.com/w-szwarc"><i class="fa-brands fa-github fa-pull-left" style="--fa-pull-margin: 1em;"></i>w-szwarc</a>
+          <a href="https://www.linkedin.com/in/wiktoria-szwarc-2541661a1/"> <i class="fa-brands fa-linkedin fa-pull-left" style="--fa-pull-margin: 1em;"></i>Wiktoria Szwarc</a>
+          <a href = "mailto: szwarc.w@outlook.com"><i class="fa-sharp fa-solid fa-envelope fa-pull-left" style="--fa-pull-margin: 1em;"></i>szwarc.w@outlook.com</a>
+        </div>
+      </section>
+
+
+    </div>
+
+  </body>
