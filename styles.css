@@ -237,6 +237,10 @@ ul {
   .tabcontent {
     font-size: 12px;
   }
+    
+  #Contact a, i {
+    font-size: 12px;
+  }
 
 }
 
